@@ -3,6 +3,7 @@ import { Hero } from "./Hero/components/Hero";
 import {CategoryCards} from "./Cards_section/components/Category_Cards"
 import { FeaturedProducts } from "./products/components/Products";
 import { Brands } from "./brands/components/Brands";
+import { Footer } from "./footer/components/Footer";
 
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
         <CategoryCards />
         <FeaturedProducts />
         <Brands />
+        <Footer />
       </div>
       
     </main>
