@@ -10,7 +10,7 @@ export default function Home() {
   return (
    <main className="flex min-h-screen">
       <Navbar />
-      <div className="flex-1 ml-60 overflow-hidden">
+      <div className="flex-1 lg:ml-[210px] lg:mt-0 overflow-hidden">
         <Hero />
         <CategoryCards />
         <FeaturedProducts />

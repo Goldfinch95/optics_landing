@@ -9,7 +9,7 @@ export function Hero() {
   const { current, goTo } = useCarousel(SLIDES.length);
 
   return (
-    <section className="relative w-full h-[70vh] overflow-hidden bg-neutral-900 rounded-bl-3xl">
+    <section className="relative w-full h-[70vh] overflow-hidden bg-neutral-900 rounded-b-3xl lg:rounded-bl-3xl lg:rounded-br-none">
       {/* Slides */}
       <AnimatePresence>
         <motion.div
@@ -33,7 +33,7 @@ export function Hero() {
       </AnimatePresence>
 
       {/* Dots */}
-      <div className="absolute bottom-4 left-5 flex gap-2 z-50">
+      <div className="absolute bottom-4 left-5 flex gap-2 z-10">
         {SLIDES.map((slide, index) => (
           <button
             key={slide.id}
