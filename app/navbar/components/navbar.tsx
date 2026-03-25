@@ -41,7 +41,7 @@ function SocialIcons() {
           key={social.label}
           href={social.href}
           title={social.label}
-          className="text-[#aaa] text-lg transition-all duration-150 hover:text-white hover:scale-110"
+          className="text-[#aaa] text-2xl sm:text-lg transition-all duration-150 hover:text-white hover:scale-110"
         >
           <FontAwesomeIcon icon={social.icon} />
         </a>
@@ -64,7 +64,7 @@ export function Navbar() {
       <aside className="hidden lg:flex fixed top-0 left-0 h-screen w-[210px] flex-col bg-[#2a2a2a] z-50">
         {/* Logo */}
         <div className="px-5 py-[22px] border-b border-white/10">
-          <span className="font-['Barlow'] text-[15px] font-semibold text-white uppercase tracking-[0.04em]">
+          <span className="font-['Barlow'] text-4xl font-semibold text-white uppercase tracking-[0.04em]">
             Óptica Prisma
           </span>
         </div>
@@ -75,11 +75,11 @@ export function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="flex items-center justify-between px-5 py-[11px] text-[#e0e0e0] font-['Barlow'] text-[13px] font-medium no-underline transition-all duration-150 hover:bg-white/[0.07] hover:text-white"
+              className="flex items-center justify-between px-5 py-[11px] text-[#e0e0e0] font-['Barlow'] text-lg  font-medium no-underline transition-all duration-150 hover:bg-white/[0.07] hover:text-white"
             >
               {link.label}
               {link.hasArrow && (
-                <span className="text-[11px] text-[#aaa]">›</span>
+                <span className=" text-[#aaa]">›</span>
               )}
             </a>
           ))}
@@ -95,7 +95,7 @@ export function Navbar() {
       <div className="lg:hidden fixed top-0 left-0 right-0 z-50">
         {/* Topbar */}
         <div className="flex items-center justify-between h-[52px] px-[18px] bg-gradient-to-b from-black/60 to-transparent">
-          <span className="font-['Barlow'] text-[13px] font-extrabold text-white uppercase tracking-[0.1em]">
+          <span className="font-['Barlow'] text-2xl font-extrabold text-white uppercase tracking-[0.1em]">
             Óptica Prisma
           </span>
           <HamburgerButton open={open} onClick={() => setOpen((v) => !v)} />
@@ -114,8 +114,8 @@ export function Navbar() {
             >
               {/* Header del drawer */}
               <div className="flex items-center justify-between h-[52px] px-[18px] flex-shrink-0">
-                <span className="font-['Barlow'] text-[13px] font-extrabold text-white uppercase tracking-[0.1em]">
-                  Óptica Prisma
+                <span className="font-['Barlow'] text-base xl:text-7xl font-extrabold text-white uppercase tracking-[0.1em]">
+                  
                 </span>
                 <HamburgerButton open={open} onClick={() => setOpen(false)} />
               </div>
@@ -130,11 +130,11 @@ export function Navbar() {
                     initial={{ opacity: 0, x: 24 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.05 + i * 0.04, duration: 0.25 }}
-                    className="flex items-center gap-2 py-[13px] font-['Barlow'] text-[20px] font-bold text-white no-underline transition-colors duration-150 hover:text-[#ccc]"
+                    className="flex items-center gap-2 py-[13px] font-['Barlow'] text-lg font-bold text-white no-underline transition-colors duration-150 hover:text-[#ccc]"
                   >
                     {link.label}
                     {link.hasArrow && (
-                      <span className="text-[13px] text-[#aaa]">›</span>
+                      <span className="text-lg text-[#aaa]">›</span>
                     )}
                   </motion.a>
                 ))}
