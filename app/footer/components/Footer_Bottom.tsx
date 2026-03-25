@@ -16,9 +16,9 @@ export function FooterBottom({ copyright, credit }: FooterBottomProps) {
   return (
     <div className="border-t h-16.5 border-[#eee] bg-[#2e2e2e]">
       <div className="px-6 sm:px-8 lg:px-10 py-4 flex flex-col sm:flex-row items-center gap-2 sm:justify-between">
-        <p className="text-[12px] text-[#aaa] text-center sm:text-left">{copyright}</p>
+        <p className="text-base text-[#aaa] text-center sm:text-left">{copyright}</p>
 
-        <div className="group flex items-center gap-1 text-[12px] text-[#aaa]">
+        <div className="group flex items-center gap-1 text-base text-[#aaa]">
           <span>Desarrollado con</span>
           <FontAwesomeIcon
             icon={faHeart}

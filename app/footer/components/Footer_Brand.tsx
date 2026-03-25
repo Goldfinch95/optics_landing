@@ -13,10 +13,10 @@ interface FooterBrandProps {
 export function FooterBrand({ name, description, social }: FooterBrandProps) {
   return (
     <div>
-      <p className="text-[15px] font-bold tracking-[0.08em] uppercase text-[#111] mb-3">
+      <p className="text-2xl sm:text-4xl font-bold tracking-[0.08em] uppercase text-[#111] mb-3">
         {name}
       </p>
-      <p className="text-[13px] text-[#666] leading-[1.7] mb-5 max-w-[260px]">
+      <p className="text-base sm:text-lg text-[#666] leading-[1.7] mb-5 max-w-[260px]">
         {description}
       </p>
       <div className="flex flex-wrap gap-[10px]">
