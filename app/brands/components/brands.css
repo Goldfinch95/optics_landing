@@ -1,0 +1,81 @@
+/* =====================================================
+   Brands — Óptica Prisma
+   ===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap');
+
+.brands-outer {
+  overflow: hidden;
+  position: relative;
+}
+
+/* Fade en los bordes */
+.brands-outer::before,
+.brands-outer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 80px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.brands-outer::before {
+  left: 0;
+  background: linear-gradient(to right, #1a1a1a, transparent);
+}
+
+.brands-outer::after {
+  right: 0;
+  background: linear-gradient(to left, #1a1a1a, transparent);
+}
+
+/* Track animado */
+.brands-track {
+  display: flex;
+  gap: 64px;
+  align-items: center;
+  width: max-content;
+  animation: brands-scroll 18s linear infinite;
+}
+
+@keyframes brands-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* Item */
+.brands-item {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #3a3a3a;
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.3s ease;
+}
+
+.brands-item:hover {
+  color: #ffffff;
+}
+
+/* Variante script (cursiva) */
+.brands-item--script {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 24px;
+  letter-spacing: 0.02em;
+  text-transform: none;
+}
+
+/* Separador punto */
+.brands-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #333;
+  flex-shrink: 0;
+}
