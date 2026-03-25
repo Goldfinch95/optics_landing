@@ -38,7 +38,7 @@ export function CategoryCards() {
           <div className="absolute inset-0 bg-black/45 group-hover:bg-black/30 transition-colors duration-300 z-10" />
 
           {/* Texto */}
-          <span className="absolute top-4 left-4 text-white font-bold text-base md:text-lg tracking-wide z-20 drop-shadow-md">
+          <span className="absolute top-4 left-4 text-white font-bold text-2xl sm:text-4xl tracking-wide z-20 drop-shadow-md">
             {card.label}
           </span>
         </motion.a>

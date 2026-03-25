@@ -64,7 +64,7 @@ export function Navbar() {
       <aside className="hidden lg:flex fixed top-0 left-0 h-screen w-[210px] flex-col bg-[#2a2a2a] z-50">
         {/* Logo */}
         <div className="px-5 py-[22px] border-b border-white/10">
-          <span className="font-['Barlow'] text-4xl font-semibold text-white uppercase tracking-[0.04em]">
+          <span className="font-['Barlow'] text-base font-semibold text-white uppercase tracking-[0.04em]">
             Óptica Prisma
           </span>
         </div>
@@ -75,7 +75,7 @@ export function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="flex items-center justify-between px-5 py-[11px] text-[#e0e0e0] font-['Barlow'] text-lg  font-medium no-underline transition-all duration-150 hover:bg-white/[0.07] hover:text-white"
+              className="flex items-center justify-between px-5 py-[11px] text-[#e0e0e0] font-['Barlow'] text-base  font-medium no-underline transition-all duration-150 hover:bg-white/[0.07] hover:text-white"
             >
               {link.label}
               {link.hasArrow && (
