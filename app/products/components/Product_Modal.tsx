@@ -16,21 +16,19 @@ export function ProductModal({ product, onClose }: ProductModalProps) {
   return (
     <AnimatePresence>
       {product && (
-        // Backdrop
         <motion.div
-          className="fixed inset-0 bg-black/55 z-50 flex items-center justify-center p-4"
+          className="fixed inset-0 bg-black/55 z-50 flex items-end sm:items-center justify-center sm:p-4"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           onClick={onClose}
         >
-          {/* Modal */}
           <motion.div
-            className="bg-white rounded-2xl overflow-hidden w-full max-w-4xl relative"
-            initial={{ opacity: 0, scale: 0.95, y: 10 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.95, y: 10 }}
-            transition={{ duration: 0.2 }}
+            className="bg-white w-full sm:rounded-2xl overflow-hidden sm:max-w-xl md:max-w-3xl lg:max-w-4xl relative"
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 40 }}
+            transition={{ duration: 0.25 }}
             onClick={(e) => e.stopPropagation()}
           >
             {/* Botón cerrar */}
@@ -41,25 +39,28 @@ export function ProductModal({ product, onClose }: ProductModalProps) {
               <FontAwesomeIcon icon={faXmark} className="text-sm" />
             </button>
 
-            <div className="flex">
+            {/* Layout: columna en mobile, fila en sm+ */}
+            <div className="flex flex-col sm:flex-row">
+
               {/* Imagen */}
-              <div className="relative w-[500px] min-w-[500px] h-[500px] bg-gray-50 flex-shrink-0">
-      <Image
-        src={product.image}
-        alt={product.name}
-        fill
-        style={{ objectFit: 'cover', objectPosition: 'center' }}
-      />
-    </div>
+              <div className="relative w-full h-[240px] sm:w-[280px] sm:h-auto md:w-[380px] lg:w-[500px] sm:min-h-[400px] bg-gray-50 flex-shrink-0">
+                <Image
+                  src={product.image}
+                  alt={product.name}
+                  fill
+                  style={{ objectFit: 'cover', objectPosition: 'center' }}
+                />
+              </div>
 
               {/* Info */}
-              <div className="flex-1 p-6 flex flex-col gap-4">
+              <div className="flex-1 p-5 sm:p-6 flex flex-col gap-3 sm:gap-4">
+
                 {/* Nombre */}
                 <div>
                   <p className="text-xs font-bold tracking-widest uppercase text-gray-400 mb-1">
                     {product.brand}
                   </p>
-                  <p className="text-lg font-bold text-gray-900 leading-snug">
+                  <p className="text-base sm:text-lg font-bold text-gray-900 leading-snug">
                     {product.name}
                   </p>
                 </div>
@@ -68,7 +69,7 @@ export function ProductModal({ product, onClose }: ProductModalProps) {
 
                 {/* Precios */}
                 <div>
-                  <p className="text-xl font-bold text-gray-900">{product.price}</p>
+                  <p className="text-lg sm:text-xl font-bold text-gray-900">{product.price}</p>
                   <p className="text-xs text-gray-500 mt-0.5">{product.cashPrice}</p>
                   <p className="text-xs text-blue-600 font-semibold mt-0.5">{product.installments}</p>
                 </div>
