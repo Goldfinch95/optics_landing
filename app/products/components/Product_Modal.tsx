@@ -57,10 +57,10 @@ export function ProductModal({ product, onClose }: ProductModalProps) {
 
                 {/* Nombre */}
                 <div>
-                  <p className="text-xs font-bold tracking-widest uppercase text-gray-400 mb-1">
+                  <p className="text-lg sm:text-xl font-bold tracking-widest uppercase text-gray-400 mb-1">
                     {product.brand}
                   </p>
-                  <p className="text-base sm:text-lg font-bold text-gray-900 leading-snug">
+                  <p className="text-4xl sm:text-4xl font-bold text-gray-900 leading-snug">
                     {product.name}
                   </p>
                 </div>
@@ -69,9 +69,9 @@ export function ProductModal({ product, onClose }: ProductModalProps) {
 
                 {/* Precios */}
                 <div>
-                  <p className="text-lg sm:text-xl font-bold text-gray-900">{product.price}</p>
-                  <p className="text-xs text-gray-500 mt-0.5">{product.cashPrice}</p>
-                  <p className="text-xs text-blue-600 font-semibold mt-0.5">{product.installments}</p>
+                  <p className="text-4xl sm:text-4xl font-bold text-gray-900">{product.price}</p>
+                  <p className="text-lg sm:text-xl py-4 sm:py-2 text-gray-500">{product.cashPrice}</p>
+                  <p className="text-lg sm:text-lg pb-2 sm:py-0 text-blue-600 font-semibold ">{product.installments}</p>
                 </div>
 
                 <hr className="border-gray-100" />
@@ -79,7 +79,7 @@ export function ProductModal({ product, onClose }: ProductModalProps) {
                 {/* Specs */}
                 <div className="flex flex-col gap-1.5">
                   {product.specs.map((spec) => (
-                    <div key={spec.label} className="flex justify-between text-xs">
+                    <div key={spec.label} className="flex justify-between text-base sm:text-lg sm:py-2">
                       <span className="text-gray-400">{spec.label}</span>
                       <span className="text-gray-900 font-semibold">{spec.value}</span>
                     </div>
@@ -91,9 +91,9 @@ export function ProductModal({ product, onClose }: ProductModalProps) {
                   href={product.whatsappMessage}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-auto w-full bg-[#25D366] hover:bg-[#1ebe5d] text-white rounded-lg py-3 flex items-center justify-center gap-2 font-bold text-xs tracking-widest uppercase transition-colors"
+                  className="mt-auto w-full bg-[#25D366] hover:bg-[#1ebe5d] text-white rounded-lg py-3 flex items-center justify-center gap-2 font-bold  tracking-widest uppercase transition-colors"
                 >
-                  <FontAwesomeIcon icon={faWhatsapp} className="text-lg" />
+                  <FontAwesomeIcon icon={faWhatsapp} className="text-xl sm:text-2xl" />
                   Consultar por WhatsApp
                 </a>
               </div>
