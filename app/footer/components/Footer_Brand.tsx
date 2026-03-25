@@ -19,7 +19,7 @@ export function FooterBrand({ name, description, social }: FooterBrandProps) {
       <p className="text-[13px] text-[#666] leading-[1.7] mb-5 max-w-[260px]">
         {description}
       </p>
-      <div className="flex gap-[10px]">
+      <div className="flex flex-wrap gap-[10px]">
         {social.map((item) => (
           <motion.a
             key={item.label}
